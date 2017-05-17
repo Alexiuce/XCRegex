@@ -29,6 +29,7 @@
 		D84D9FA11C60C529009946E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D84D9FA71C60D129009946E3 /* XCRexWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCRexWindow.h; sourceTree = "<group>"; };
 		D84D9FA81C60D129009946E3 /* XCRexWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCRexWindow.m; sourceTree = "<group>"; };
+		F29D01731ECAFB1400F94054 /* XCRegex.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XCRegex.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +63,7 @@
 		D84D9F951C60C529009946E3 /* XCRegex */ = {
 			isa = PBXGroup;
 			children = (
+				F29D01731ECAFB1400F94054 /* XCRegex.entitlements */,
 				D84D9F961C60C529009946E3 /* AppDelegate.h */,
 				D84D9F971C60C529009946E3 /* AppDelegate.m */,
 				D84D9FA71C60D129009946E3 /* XCRexWindow.h */,
@@ -116,6 +118,13 @@
 				TargetAttributes = {
 					D84D9F921C60C529009946E3 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = Z6P4JKNFHR;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -258,12 +267,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = XCRegex/XCRegex.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Z6P4JKNFHR;
 				INFOPLIST_FILE = XCRegex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = cjz.zhidier.XCRegex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -271,12 +284,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = XCRegex/XCRegex.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Z6P4JKNFHR;
 				INFOPLIST_FILE = XCRegex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = cjz.zhidier.XCRegex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
