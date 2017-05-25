@@ -14,9 +14,11 @@
 @interface XCRexWindow ()<NSTextViewDelegate>
 
 
-@property (weak) IBOutlet NSScrollView *patternTextView;
-@property (weak) IBOutlet NSScrollView *sourceTextView;
-@property (weak) IBOutlet NSScrollView *resultTextView;
+
+@property (unsafe_unretained) IBOutlet NSTextView *patternTextView;
+@property (unsafe_unretained) IBOutlet NSTextView *sourceTextView;
+@property (unsafe_unretained) IBOutlet NSTextView *resultTextView;
+
 @property (weak) IBOutlet NSTextField *resultField;
 
 
@@ -34,30 +36,23 @@
 @implementation XCRexWindow
 
 - (void)awakeFromNib{
-    {
-        NSTextView *rTextView = _resultTextView.documentView;
-        rTextView.font = [NSFont systemFontOfSize:15];
-        rTextView.editable = NO;
-        rTextView.textColor = XColor(0, 128, 255)
-    }
-    {
-        NSTextView *pTextView = self.patternTextView.documentView;
-        pTextView.font = [NSFont systemFontOfSize:15];
-        pTextView.delegate = self;
-        pTextView.textColor = XColor(255, 128, 0)
-    }
-    {
-        NSTextView *sTextView = self.sourceTextView.documentView;
-        sTextView.font = [NSFont systemFontOfSize:15];
-        sTextView.delegate = self;
-    }
+        _resultTextView.font = [NSFont systemFontOfSize:15];
+        _resultTextView.textColor = XColor(0, 128, 255)
+
+        _patternTextView.font = [NSFont systemFontOfSize:15];
+        _patternTextView.delegate = self;
+        _patternTextView.textColor = XColor(255, 128, 0)
+
+        _sourceTextView.font = [NSFont systemFontOfSize:15];
+        _sourceTextView.delegate = self;
+
 }
 
 - (void)textDidChange:(NSNotification *)notification{
     NSTextView *currentTextView = notification.object;
-    if (currentTextView == self.patternTextView.documentView) {
+    if (currentTextView == self.patternTextView) {
         _patternString = currentTextView.string;
-    }else if (currentTextView == self.sourceTextView.documentView){
+    }else if (currentTextView == self.sourceTextView){
         _sourceString = currentTextView.string;
     }
     
@@ -71,21 +66,18 @@
     NSUInteger count = resultArray.count;
     _resultString = @"";
     if (count == 0){
-        NSTextView *resultTextView = _resultTextView.documentView;
-        resultTextView.string = _resultString;
-         self.resultField.stringValue = @"match result : 0 ";
+        _resultTextView.string = _resultString;
+         self.resultField.stringValue = @" 0 ";
         return;
     }
     for (int i = 0; i < count; i ++) {
         NSString *rString = resultArray[i];
        _resultString = [_resultString stringByAppendingString:rString];
         if (i == count - 1) {break;}
-
       _resultString =  [_resultString stringByAppendingString:@"    "];
     }
-    NSTextView *resultTextView = _resultTextView.documentView;
-    resultTextView.string = _resultString;
-    self.resultField.stringValue =  [NSString stringWithFormat:@"match result : %zd ",count];
+    _resultTextView.string = _resultString;
+    self.resultField.stringValue =  [NSString stringWithFormat:@" %zd ",count];
 }
 /** 关闭窗口 */
 - (void)close{
