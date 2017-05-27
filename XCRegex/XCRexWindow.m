@@ -36,6 +36,7 @@
 @implementation XCRexWindow
 
 - (void)awakeFromNib{
+
         _resultTextView.font = [NSFont systemFontOfSize:15];
         _resultTextView.textColor = XColor(0, 128, 255)
 
