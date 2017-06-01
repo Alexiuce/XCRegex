@@ -55,7 +55,7 @@
     self.statusItem.action = @selector(clickStatusItem);
 }
 - (void)clickStatusItem{
-    [self makeKeyAndOrderFront:nil];
+    self.visible ? nil :[self makeKeyAndOrderFront:nil];
 }
 - (void)textDidChange:(NSNotification *)notification{
     NSTextView *currentTextView = notification.object;
