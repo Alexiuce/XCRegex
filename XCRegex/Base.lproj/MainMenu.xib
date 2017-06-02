@@ -660,7 +660,7 @@
                         <items>
                             <menuItem title="XCRegex Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                 <connections>
-                                    <action selector="showHelp:" target="-1" id="y7X-2Q-9no"/>
+                                    <action selector="clickHelp:" target="Voe-Tx-rLC" id="p4n-LI-p2e"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -672,7 +672,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES"/>
             <rect key="contentRect" x="344" y="136" width="733" height="567"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1080"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <value key="minSize" type="size" width="733" height="567"/>
             <value key="minFullScreenContentSize" type="size" width="733" height="567"/>
             <view key="contentView" id="EiT-Mj-1SZ">
