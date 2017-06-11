@@ -46,7 +46,6 @@
 
         _sourceTextView.font = [NSFont systemFontOfSize:15];
         _sourceTextView.delegate = self;
-
 }
 
 - (void)textDidChange:(NSNotification *)notification{
