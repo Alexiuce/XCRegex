@@ -14,6 +14,8 @@
 		D84D9F9D1C60C529009946E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D84D9F9C1C60C529009946E3 /* Assets.xcassets */; };
 		D84D9FA01C60C529009946E3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84D9F9E1C60C529009946E3 /* MainMenu.xib */; };
 		D84D9FA91C60D129009946E3 /* XCRexWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D84D9FA81C60D129009946E3 /* XCRexWindow.m */; };
+		D8D1137A1EECF1D1008ED4A7 /* NSTextView+XCRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D113791EECF1D1008ED4A7 /* NSTextView+XCRegex.m */; };
+		D8D1137D1EECF4B7008ED4A7 /* NSString+XCEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D1137C1EECF4B7008ED4A7 /* NSString+XCEmpty.m */; };
 		F299500C1EE156A900FA709C /* XCHelperController.m in Sources */ = {isa = PBXBuildFile; fileRef = F299500A1EE156A900FA709C /* XCHelperController.m */; };
 		F299500D1EE156A900FA709C /* XCHelperController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F299500B1EE156A900FA709C /* XCHelperController.xib */; };
 /* End PBXBuildFile section */
@@ -31,6 +33,10 @@
 		D84D9FA11C60C529009946E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D84D9FA71C60D129009946E3 /* XCRexWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCRexWindow.h; sourceTree = "<group>"; };
 		D84D9FA81C60D129009946E3 /* XCRexWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCRexWindow.m; sourceTree = "<group>"; };
+		D8D113781EECF1D1008ED4A7 /* NSTextView+XCRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextView+XCRegex.h"; sourceTree = "<group>"; };
+		D8D113791EECF1D1008ED4A7 /* NSTextView+XCRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextView+XCRegex.m"; sourceTree = "<group>"; };
+		D8D1137B1EECF4B7008ED4A7 /* NSString+XCEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XCEmpty.h"; sourceTree = "<group>"; };
+		D8D1137C1EECF4B7008ED4A7 /* NSString+XCEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XCEmpty.m"; sourceTree = "<group>"; };
 		F29950091EE156A900FA709C /* XCHelperController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCHelperController.h; sourceTree = "<group>"; };
 		F299500A1EE156A900FA709C /* XCHelperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCHelperController.m; sourceTree = "<group>"; };
 		F299500B1EE156A900FA709C /* XCHelperController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCHelperController.xib; sourceTree = "<group>"; };
@@ -68,6 +74,7 @@
 		D84D9F951C60C529009946E3 /* XCRegex */ = {
 			isa = PBXGroup;
 			children = (
+				D8D113771EECF1B0008ED4A7 /* Category */,
 				F29D01731ECAFB1400F94054 /* XCRegex.entitlements */,
 				D84D9F961C60C529009946E3 /* AppDelegate.h */,
 				D84D9F971C60C529009946E3 /* AppDelegate.m */,
@@ -93,6 +100,17 @@
 				D84D9F9A1C60C529009946E3 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D8D113771EECF1B0008ED4A7 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D8D113781EECF1D1008ED4A7 /* NSTextView+XCRegex.h */,
+				D8D113791EECF1D1008ED4A7 /* NSTextView+XCRegex.m */,
+				D8D1137B1EECF4B7008ED4A7 /* NSString+XCEmpty.h */,
+				D8D1137C1EECF4B7008ED4A7 /* NSString+XCEmpty.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,8 +191,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D84D9F9B1C60C529009946E3 /* main.m in Sources */,
+				D8D1137D1EECF4B7008ED4A7 /* NSString+XCEmpty.m in Sources */,
 				D84D9FA91C60D129009946E3 /* XCRexWindow.m in Sources */,
 				F299500C1EE156A900FA709C /* XCHelperController.m in Sources */,
+				D8D1137A1EECF1D1008ED4A7 /* NSTextView+XCRegex.m in Sources */,
 				D83674A81C64BF7400F0DF51 /* RegexKitLite.m in Sources */,
 				D84D9F981C60C529009946E3 /* AppDelegate.m in Sources */,
 			);

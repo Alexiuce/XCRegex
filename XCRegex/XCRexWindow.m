@@ -7,7 +7,8 @@
 //
 
 #import "XCRexWindow.h"
-#import "RegexKitLite.h"
+#import "NSTextView+XCRegex.h"
+
 
 #define XColor(r,g,b)  [NSColor colorWithRed:(r / 255.0) green:(g/255.0) blue:(b/255.0) alpha:1];
 
@@ -17,19 +18,6 @@
 
 @property (unsafe_unretained) IBOutlet NSTextView *patternTextView;
 @property (unsafe_unretained) IBOutlet NSTextView *sourceTextView;
-@property (unsafe_unretained) IBOutlet NSTextView *resultTextView;
-
-@property (weak) IBOutlet NSTextField *resultField;
-
-
-@property (nonatomic, copy) NSString *patternString;
-@property (nonatomic, copy) NSString *sourceString;
-
-@property (nonatomic, copy) NSString *resultString;
-
-@property (nonatomic, strong) NSArray *resultArray;
-
-
 @property (nonatomic ,strong) NSStatusItem *statusItem;
 
 @end
@@ -38,57 +26,37 @@
 @implementation XCRexWindow
 
 - (void)awakeFromNib{
-
-        _resultTextView.font = [NSFont systemFontOfSize:15];
-        _resultTextView.textColor = XColor(0, 128, 255)
-
-        _patternTextView.font = [NSFont systemFontOfSize:15];
-        _patternTextView.delegate = self;
-        _patternTextView.textColor = XColor(255, 128, 0)
-
-        _sourceTextView.font = [NSFont systemFontOfSize:15];
-        _sourceTextView.delegate = self;
-
+    // 设置UI
+    _patternTextView.font = [NSFont systemFontOfSize:15];
+    _patternTextView.delegate = self;
+    _patternTextView.textColor = XColor(255, 128, 0)
     
+    _sourceTextView.font = [NSFont systemFontOfSize:15];
+    _sourceTextView.delegate = self;
+    _sourceTextView.textColor = [NSColor whiteColor];
+    // 设置状态栏icon
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     self.statusItem.image = [NSImage imageNamed:@"statusItem"];
     self.statusItem.target = self;
     self.statusItem.action = @selector(clickStatusItem);
+    
+    // 设置window titleBar 透明
+    self.titlebarAppearsTransparent = YES;
+    // 设置内容填充整个window
+    self.styleMask = self.styleMask | NSFullSizeContentViewWindowMask;
+    // 隐藏全屏按钮
+    [self standardWindowButton:NSWindowZoomButton].hidden = YES;
+
 }
+#pragma mark - 事件监听
 - (void)clickStatusItem{
     self.visible ? nil :[self makeKeyAndOrderFront:nil];
 }
 - (void)textDidChange:(NSNotification *)notification{
-    NSTextView *currentTextView = notification.object;
-    if (currentTextView == self.patternTextView) {
-        _patternString = currentTextView.string;
-    }else if (currentTextView == self.sourceTextView){
-        _sourceString = currentTextView.string;
-    }
-    
-    if (_patternString && _sourceString) {
-        self.resultArray = [_sourceString componentsMatchedByRegex:_patternString];
-    }
+    [_sourceTextView xc_regextHightLightWithPattern:_patternTextView.string];
 }
 
-- (void)setResultArray:(NSArray *)resultArray{
-    _resultArray = resultArray;
-    NSUInteger count = resultArray.count;
-    _resultString = @"";
-    if (count == 0){
-        _resultTextView.string = _resultString;
-         self.resultField.stringValue = @" 0 ";
-        return;
-    }
-    for (int i = 0; i < count; i ++) {
-        NSString *rString = resultArray[i];
-       _resultString = [_resultString stringByAppendingString:rString];
-        if (i == count - 1) {break;}
-      _resultString =  [_resultString stringByAppendingString:@"    "];
-    }
-    _resultTextView.string = _resultString;
-    self.resultField.stringValue =  [NSString stringWithFormat:@" %zd ",count];
-}
+
 
 
 
