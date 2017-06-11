@@ -14,6 +14,8 @@
 		D84D9F9D1C60C529009946E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D84D9F9C1C60C529009946E3 /* Assets.xcassets */; };
 		D84D9FA01C60C529009946E3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84D9F9E1C60C529009946E3 /* MainMenu.xib */; };
 		D84D9FA91C60D129009946E3 /* XCRexWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D84D9FA81C60D129009946E3 /* XCRexWindow.m */; };
+		F299500C1EE156A900FA709C /* XCHelperController.m in Sources */ = {isa = PBXBuildFile; fileRef = F299500A1EE156A900FA709C /* XCHelperController.m */; };
+		F299500D1EE156A900FA709C /* XCHelperController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F299500B1EE156A900FA709C /* XCHelperController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,9 @@
 		D84D9FA11C60C529009946E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D84D9FA71C60D129009946E3 /* XCRexWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCRexWindow.h; sourceTree = "<group>"; };
 		D84D9FA81C60D129009946E3 /* XCRexWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCRexWindow.m; sourceTree = "<group>"; };
+		F29950091EE156A900FA709C /* XCHelperController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCHelperController.h; sourceTree = "<group>"; };
+		F299500A1EE156A900FA709C /* XCHelperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCHelperController.m; sourceTree = "<group>"; };
+		F299500B1EE156A900FA709C /* XCHelperController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCHelperController.xib; sourceTree = "<group>"; };
 		F29D01731ECAFB1400F94054 /* XCRegex.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XCRegex.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +75,9 @@
 				D84D9FA81C60D129009946E3 /* XCRexWindow.m */,
 				D83674A61C64BF7400F0DF51 /* RegexKitLite.h */,
 				D83674A71C64BF7400F0DF51 /* RegexKitLite.m */,
+				F29950091EE156A900FA709C /* XCHelperController.h */,
+				F299500A1EE156A900FA709C /* XCHelperController.m */,
+				F299500B1EE156A900FA709C /* XCHelperController.xib */,
 				D84D9F991C60C529009946E3 /* Supporting Files */,
 			);
 			path = XCRegex;
@@ -152,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D84D9F9D1C60C529009946E3 /* Assets.xcassets in Resources */,
+				F299500D1EE156A900FA709C /* XCHelperController.xib in Resources */,
 				D84D9FA01C60C529009946E3 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +174,7 @@
 			files = (
 				D84D9F9B1C60C529009946E3 /* main.m in Sources */,
 				D84D9FA91C60D129009946E3 /* XCRexWindow.m in Sources */,
+				F299500C1EE156A900FA709C /* XCHelperController.m in Sources */,
 				D83674A81C64BF7400F0DF51 /* RegexKitLite.m in Sources */,
 				D84D9F981C60C529009946E3 /* AppDelegate.m in Sources */,
 			);

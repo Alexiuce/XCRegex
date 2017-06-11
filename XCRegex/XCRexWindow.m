@@ -30,6 +30,8 @@
 @property (nonatomic, strong) NSArray *resultArray;
 
 
+@property (nonatomic ,strong) NSStatusItem *statusItem;
+
 @end
 
 
@@ -46,8 +48,16 @@
 
         _sourceTextView.font = [NSFont systemFontOfSize:15];
         _sourceTextView.delegate = self;
-}
 
+    
+    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    self.statusItem.image = [NSImage imageNamed:@"statusItem"];
+    self.statusItem.target = self;
+    self.statusItem.action = @selector(clickStatusItem);
+}
+- (void)clickStatusItem{
+    self.visible ? nil :[self makeKeyAndOrderFront:nil];
+}
 - (void)textDidChange:(NSNotification *)notification{
     NSTextView *currentTextView = notification.object;
     if (currentTextView == self.patternTextView) {
@@ -79,11 +89,7 @@
     _resultTextView.string = _resultString;
     self.resultField.stringValue =  [NSString stringWithFormat:@" %zd ",count];
 }
-/** 关闭窗口 */
-- (void)close{
-    [super close];
-    [[NSApplication sharedApplication] terminate:nil];
-}
+
 
 
 @end
