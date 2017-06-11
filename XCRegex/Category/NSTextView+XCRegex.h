@@ -10,6 +10,8 @@
 
 @interface NSTextView (XCRegex)
 
+- (void)xc_hightLightForRegex;
+
 - (void)xc_regextHightLightWithPattern:(NSString *)pattern;
 
 @end

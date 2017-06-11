@@ -37,6 +37,7 @@
 		D8D113791EECF1D1008ED4A7 /* NSTextView+XCRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextView+XCRegex.m"; sourceTree = "<group>"; };
 		D8D1137B1EECF4B7008ED4A7 /* NSString+XCEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XCEmpty.h"; sourceTree = "<group>"; };
 		D8D1137C1EECF4B7008ED4A7 /* NSString+XCEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XCEmpty.m"; sourceTree = "<group>"; };
+		D8D1137E1EED0754008ED4A7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F29950091EE156A900FA709C /* XCHelperController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCHelperController.h; sourceTree = "<group>"; };
 		F299500A1EE156A900FA709C /* XCHelperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCHelperController.m; sourceTree = "<group>"; };
 		F299500B1EE156A900FA709C /* XCHelperController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCHelperController.xib; sourceTree = "<group>"; };
@@ -98,6 +99,7 @@
 				D84D9F9C1C60C529009946E3 /* Assets.xcassets */,
 				D84D9FA11C60C529009946E3 /* Info.plist */,
 				D84D9F9A1C60C529009946E3 /* main.m */,
+				D8D1137E1EED0754008ED4A7 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -301,6 +303,8 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Z6P4JKNFHR;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XCRegex/PrefixHeader.pch";
 				INFOPLIST_FILE = XCRegex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -318,6 +322,8 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Z6P4JKNFHR;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XCRegex/PrefixHeader.pch";
 				INFOPLIST_FILE = XCRegex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;

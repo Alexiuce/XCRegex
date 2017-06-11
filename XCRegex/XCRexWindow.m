@@ -10,7 +10,7 @@
 #import "NSTextView+XCRegex.h"
 
 
-#define XColor(r,g,b)  [NSColor colorWithRed:(r / 255.0) green:(g/255.0) blue:(b/255.0) alpha:1];
+
 
 @interface XCRexWindow ()<NSTextViewDelegate>
 
@@ -29,7 +29,7 @@
     // 设置UI
     _patternTextView.font = [NSFont systemFontOfSize:15];
     _patternTextView.delegate = self;
-    _patternTextView.textColor = XColor(255, 128, 0)
+    _patternTextView.textColor = [NSColor whiteColor]; //;
     
     _sourceTextView.font = [NSFont systemFontOfSize:15];
     _sourceTextView.delegate = self;
@@ -53,6 +53,7 @@
     self.visible ? nil :[self makeKeyAndOrderFront:nil];
 }
 - (void)textDidChange:(NSNotification *)notification{
+    [_patternTextView xc_hightLightForRegex];
     [_sourceTextView xc_regextHightLightWithPattern:_patternTextView.string];
 }
 
