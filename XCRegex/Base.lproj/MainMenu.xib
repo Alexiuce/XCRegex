@@ -691,46 +691,7 @@
                                                         <attributes>
                                                             <color key="NSColor" red="1" green="0.50195999999999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <font key="NSFont" size="15" name=".PingFangSC-Regular"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                                <tabStops>
-                                                                    <textTab alignment="left" location="28">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="56">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="84">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="112">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="140">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="168">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="196">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="224">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="252">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="280">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="308">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="336">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                </tabStops>
-                                                            </paragraphStyle>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
@@ -758,6 +719,7 @@
                         </view>
                         <constraints>
                             <constraint firstAttribute="height" constant="201" id="UlM-GE-zJu"/>
+                            <constraint firstAttribute="width" constant="733" id="b6b-5k-9ia"/>
                         </constraints>
                         <color key="fillColor" red="0.28278516362934997" green="0.070454721091129865" blue="0.31973085413419688" alpha="0.81475572183098588" colorSpace="custom" customColorSpace="sRGB"/>
                     </box>
@@ -816,6 +778,9 @@
                                 <constraint firstItem="lKN-AL-X5Z" firstAttribute="leading" secondItem="Une-Qu-5D8" secondAttribute="leading" constant="9" id="nH6-f8-mWP"/>
                             </constraints>
                         </view>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="733" id="Uld-fs-KN0"/>
+                        </constraints>
                         <color key="fillColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </box>
                 </subviews>
@@ -823,8 +788,6 @@
                     <constraint firstAttribute="bottom" secondItem="Ka7-Wb-92r" secondAttribute="bottom" id="2Ne-U7-2rT"/>
                     <constraint firstItem="Ka7-Wb-92r" firstAttribute="top" secondItem="xzc-ip-jRO" secondAttribute="bottom" id="9FX-uF-H18"/>
                     <constraint firstItem="xzc-ip-jRO" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="Ahn-Sq-TTa"/>
-                    <constraint firstAttribute="trailing" secondItem="Ka7-Wb-92r" secondAttribute="trailing" id="TAB-Br-xXe"/>
-                    <constraint firstAttribute="trailing" secondItem="xzc-ip-jRO" secondAttribute="trailing" id="cta-gV-uMb"/>
                     <constraint firstItem="Ka7-Wb-92r" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="mEP-S2-gvC"/>
                     <constraint firstItem="xzc-ip-jRO" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="skS-tU-mf1"/>
                 </constraints>

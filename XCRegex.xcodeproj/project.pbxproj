@@ -14,6 +14,8 @@
 		D84D9F9D1C60C529009946E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D84D9F9C1C60C529009946E3 /* Assets.xcassets */; };
 		D84D9FA01C60C529009946E3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84D9F9E1C60C529009946E3 /* MainMenu.xib */; };
 		D84D9FA91C60D129009946E3 /* XCRexWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D84D9FA81C60D129009946E3 /* XCRexWindow.m */; };
+		D8825B791EEEE072004D7F57 /* XCAccessController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8825B771EEEE072004D7F57 /* XCAccessController.m */; };
+		D8825B7A1EEEE072004D7F57 /* XCAccessController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8825B781EEEE072004D7F57 /* XCAccessController.xib */; };
 		D8D1137A1EECF1D1008ED4A7 /* NSTextView+XCRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D113791EECF1D1008ED4A7 /* NSTextView+XCRegex.m */; };
 		D8D1137D1EECF4B7008ED4A7 /* NSString+XCEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D1137C1EECF4B7008ED4A7 /* NSString+XCEmpty.m */; };
 		F299500C1EE156A900FA709C /* XCHelperController.m in Sources */ = {isa = PBXBuildFile; fileRef = F299500A1EE156A900FA709C /* XCHelperController.m */; };
@@ -33,6 +35,9 @@
 		D84D9FA11C60C529009946E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D84D9FA71C60D129009946E3 /* XCRexWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCRexWindow.h; sourceTree = "<group>"; };
 		D84D9FA81C60D129009946E3 /* XCRexWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCRexWindow.m; sourceTree = "<group>"; };
+		D8825B761EEEE072004D7F57 /* XCAccessController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCAccessController.h; sourceTree = "<group>"; };
+		D8825B771EEEE072004D7F57 /* XCAccessController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCAccessController.m; sourceTree = "<group>"; };
+		D8825B781EEEE072004D7F57 /* XCAccessController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCAccessController.xib; sourceTree = "<group>"; };
 		D8D113781EECF1D1008ED4A7 /* NSTextView+XCRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextView+XCRegex.h"; sourceTree = "<group>"; };
 		D8D113791EECF1D1008ED4A7 /* NSTextView+XCRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextView+XCRegex.m"; sourceTree = "<group>"; };
 		D8D1137B1EECF4B7008ED4A7 /* NSString+XCEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XCEmpty.h"; sourceTree = "<group>"; };
@@ -81,6 +86,9 @@
 				D84D9F971C60C529009946E3 /* AppDelegate.m */,
 				D84D9FA71C60D129009946E3 /* XCRexWindow.h */,
 				D84D9FA81C60D129009946E3 /* XCRexWindow.m */,
+				D8825B761EEEE072004D7F57 /* XCAccessController.h */,
+				D8825B771EEEE072004D7F57 /* XCAccessController.m */,
+				D8825B781EEEE072004D7F57 /* XCAccessController.xib */,
 				D83674A61C64BF7400F0DF51 /* RegexKitLite.h */,
 				D83674A71C64BF7400F0DF51 /* RegexKitLite.m */,
 				F29950091EE156A900FA709C /* XCHelperController.h */,
@@ -181,6 +189,7 @@
 			files = (
 				D84D9F9D1C60C529009946E3 /* Assets.xcassets in Resources */,
 				F299500D1EE156A900FA709C /* XCHelperController.xib in Resources */,
+				D8825B7A1EEEE072004D7F57 /* XCAccessController.xib in Resources */,
 				D84D9FA01C60C529009946E3 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8825B791EEEE072004D7F57 /* XCAccessController.m in Sources */,
 				D84D9F9B1C60C529009946E3 /* main.m in Sources */,
 				D8D1137D1EECF4B7008ED4A7 /* NSString+XCEmpty.m in Sources */,
 				D84D9FA91C60D129009946E3 /* XCRexWindow.m in Sources */,

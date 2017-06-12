@@ -8,6 +8,7 @@
 
 #import "XCRexWindow.h"
 #import "NSTextView+XCRegex.h"
+#import "XCAccessController.h"
 
 
 
@@ -19,6 +20,8 @@
 @property (unsafe_unretained) IBOutlet NSTextView *patternTextView;
 @property (unsafe_unretained) IBOutlet NSTextView *sourceTextView;
 @property (nonatomic ,strong) NSStatusItem *statusItem;
+
+@property (nonatomic, strong)XCAccessController *accessController;
 
 @end
 
@@ -49,6 +52,27 @@
     // 隐藏全屏按钮
     [self standardWindowButton:NSWindowZoomButton].hidden = YES;
     [self textDidChange:[NSNotification notificationWithName:@"begin" object:nil]];
+    
+    
+    NSButton *btn = [NSButton buttonWithImage:[NSImage imageNamed:@"statusItem"] target:self action:@selector(clickButton:)];
+    btn.bezelStyle = NSBezelStyleRegularSquare;
+    btn.bordered = NO;
+    NSView *themeView = [[self contentView] superview];
+    NSRect rect = themeView.bounds;
+    btn.frame = NSMakeRect(rect.size.width - 30, -2, 30, 25);
+    NSArray *subViews = [themeView subviews];
+    NSView *containerView = [subViews objectAtIndex:1];
+    [containerView addSubview:btn positioned:NSWindowAbove relativeTo:nil];
+    
+    
+    // 设置 custom window title
+    
+    
+    
+    NSRect oldRect = self.frame;
+    NSView *accessView = self.accessController.view;
+    accessView.frame = NSMakeRect(oldRect.size.width, 0, accessView.bounds.size.width, accessView.bounds.size.height);
+    [self.contentView addSubview:self.accessController.view];
 
 }
 
@@ -63,7 +87,29 @@
 }
 
 
+- (void)clickButton:(NSButton *)btn{
+    NSLog(@"%zd",btn.state);
+    CGFloat deltaWidth = btn.state ? 300 : -300;
+    NSRect oldRect = self.frame;
+    NSRect newRect = NSMakeRect(oldRect.origin.x, oldRect.origin.y, oldRect.size.width + deltaWidth, oldRect.size.height);
+    
+  
+    
+
+    
+    [self setFrame:newRect display:YES animate:YES];
+    
 
 
+   
+}
+
+
+- (XCAccessController *)accessController{
+    if (_accessController == nil) {
+        _accessController = [[XCAccessController alloc]initWithNibName:@"XCAccessController" bundle:nil];
+    }
+    return  _accessController;
+}
 
 @end
