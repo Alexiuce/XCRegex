@@ -54,12 +54,12 @@
     [self textDidChange:[NSNotification notificationWithName:@"begin" object:nil]];
     
     
-    NSButton *btn = [NSButton buttonWithImage:[NSImage imageNamed:@"statusItem"] target:self action:@selector(clickButton:)];
+    NSButton *btn = [NSButton buttonWithImage:[NSImage imageNamed:@"left"] target:self action:@selector(clickButton:)];
     btn.bezelStyle = NSBezelStyleRegularSquare;
     btn.bordered = NO;
     NSView *themeView = [[self contentView] superview];
     NSRect rect = themeView.bounds;
-    btn.frame = NSMakeRect(rect.size.width - 30, -4, 30, 25);
+    btn.frame = NSMakeRect(rect.size.width - 30, -4, 25, 25);
     NSArray *subViews = [themeView subviews];
     NSView *containerView = [subViews objectAtIndex:1];
     [containerView addSubview:btn positioned:NSWindowAbove relativeTo:nil];
@@ -97,6 +97,8 @@
 
 - (void)clickButton:(NSButton *)btn{
     CGFloat deltaWidth = btn.state ? 300 : -300;
+    NSString *imgName = btn.state == 1? @"right" :@"left";
+    btn.image = [NSImage imageNamed:imgName];
     NSRect oldRect = self.frame;
     NSRect newRect = NSMakeRect(oldRect.origin.x, oldRect.origin.y, oldRect.size.width + deltaWidth, oldRect.size.height);
     [self setFrame:newRect display:YES animate:YES];
