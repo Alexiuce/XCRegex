@@ -59,17 +59,26 @@
     btn.bordered = NO;
     NSView *themeView = [[self contentView] superview];
     NSRect rect = themeView.bounds;
-    btn.frame = NSMakeRect(rect.size.width - 30, -2, 30, 25);
+    btn.frame = NSMakeRect(rect.size.width - 30, -4, 30, 25);
     NSArray *subViews = [themeView subviews];
     NSView *containerView = [subViews objectAtIndex:1];
     [containerView addSubview:btn positioned:NSWindowAbove relativeTo:nil];
     
-    
-    // 设置 custom window title
-    
-    
-    
     NSRect oldRect = self.frame;
+    CGFloat tx = (oldRect.size.width - 80) * 0.5;
+    // 设置 custom window title
+    NSRect titleRect = NSMakeRect(tx, -4, 80, 25);
+    NSTextField *titleLabl = [[NSTextField alloc]initWithFrame:titleRect];
+    titleLabl.alignment = NSTextAlignmentCenter;
+    [titleLabl setBezeled:NO];
+    [titleLabl setDrawsBackground:NO];
+    [titleLabl setSelectable:NO];
+    titleLabl.stringValue = @"XCRegex";
+    titleLabl.font = [NSFont systemFontOfSize:15];
+    titleLabl.textColor = [NSColor blackColor];
+    [containerView addSubview:titleLabl positioned:NSWindowAbove relativeTo:nil];
+    
+    
     NSView *accessView = self.accessController.view;
     accessView.frame = NSMakeRect(oldRect.size.width, 0, accessView.bounds.size.width, accessView.bounds.size.height);
     [self.contentView addSubview:self.accessController.view];
@@ -86,22 +95,11 @@
     [_sourceTextView xc_regextHightLightWithPattern:_patternTextView.string];
 }
 
-
 - (void)clickButton:(NSButton *)btn{
-    NSLog(@"%zd",btn.state);
     CGFloat deltaWidth = btn.state ? 300 : -300;
     NSRect oldRect = self.frame;
     NSRect newRect = NSMakeRect(oldRect.origin.x, oldRect.origin.y, oldRect.size.width + deltaWidth, oldRect.size.height);
-    
-  
-    
-
-    
     [self setFrame:newRect display:YES animate:YES];
-    
-
-
-   
 }
 
 
