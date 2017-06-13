@@ -53,15 +53,17 @@
 
 - (void)xc_regextHightLightWithPattern:(NSString *)pattern{
     if ([self.string xc_isEmpty]) {return;}
+    
     NSRange selectRange = self.selectedRange;
     NSMutableAttributedString *attributeText = [[NSMutableAttributedString alloc]initWithString:self.string];
     NSRange range = NSMakeRange(0, self.string.length);
-    [attributeText setAttributes:@{NSFontAttributeName : self.font,NSForegroundColorAttributeName: self.textColor} range:range];
+    [attributeText setAttributes:@{NSFontAttributeName : [NSFont systemFontOfSize:15],NSForegroundColorAttributeName: self.textColor} range:range];
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:nil];
     __block int index = 0;
     [regex enumerateMatchesInString:self.string options:0 range:NSMakeRange(0, self.string.length) usingBlock:^(NSTextCheckingResult * _Nullable result, NSMatchingFlags flags, BOOL * _Nonnull stop) {
         NSColor *backColor = index % 2 == 0 ? [NSColor redColor]: XColor(50, 108, 191);
-        [attributeText addAttributes:@{NSBackgroundColorAttributeName:backColor} range:result.range];
+        
+        [attributeText addAttributes:@{NSBackgroundColorAttributeName:backColor,NSFontAttributeName : [NSFont boldSystemFontOfSize:23]} range:result.range];
         index++;
     }];
     [self.textStorage setAttributedString:attributeText];
