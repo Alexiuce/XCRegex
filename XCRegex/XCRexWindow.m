@@ -80,7 +80,7 @@
     
     
     NSView *accessView = self.accessController.view;
-    accessView.frame = NSMakeRect(oldRect.size.width, 0, accessView.bounds.size.width, accessView.bounds.size.height);
+    accessView.frame = NSMakeRect(oldRect.size.width, 0, accessView.bounds.size.width, accessView.bounds.size.height + 1);
     [self.contentView addSubview:self.accessController.view];
 
 }
