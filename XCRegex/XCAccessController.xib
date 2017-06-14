@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,15 +19,15 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <box boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="I3s-41-BPa">
-                    <rect key="frame" x="0.0" y="0.0" width="300" height="567"/>
+                    <rect key="frame" x="1" y="0.0" width="299" height="567"/>
                     <view key="contentView" id="40M-PK-a1g">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="567"/>
+                        <rect key="frame" x="0.0" y="0.0" width="299" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <box boxType="secondary" borderType="line" title="Metacharacter" translatesAutoresizingMaskIntoConstraints="NO" id="xoU-oE-usF">
-                                <rect key="frame" x="17" y="4" width="266" height="558"/>
+                                <rect key="frame" x="17" y="4" width="265" height="558"/>
                                 <view key="contentView" id="aEo-Sw-CtY">
-                                    <rect key="frame" x="1" y="1" width="264" height="532"/>
+                                    <rect key="frame" x="1" y="1" width="263" height="532"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="00l-qy-Sfl">
@@ -425,7 +426,7 @@
                 </box>
             </subviews>
             <constraints>
-                <constraint firstItem="I3s-41-BPa" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="KGI-m0-qog"/>
+                <constraint firstItem="I3s-41-BPa" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="1" id="KGI-m0-qog"/>
                 <constraint firstAttribute="trailing" secondItem="I3s-41-BPa" secondAttribute="trailing" id="Vql-fe-wxa"/>
                 <constraint firstItem="I3s-41-BPa" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="dXc-dZ-Ona"/>
                 <constraint firstAttribute="bottom" secondItem="I3s-41-BPa" secondAttribute="bottom" id="o3W-xv-9e8"/>
