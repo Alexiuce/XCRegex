@@ -55,11 +55,7 @@
     if (![[NSFileManager defaultManager] fileExistsAtPath:helperPath]){
         return;
     }
-    NSURL *helperUrl = [NSURL fileURLWithPath:helperPath];
-    // Registering helper app
-    if (LSRegisterURL((__bridge CFURLRef)helperUrl, true) != noErr){
-        NSLog(@"LSRegisterURL failed!");
-    }
+
     // Setting login
     // com.xxx.xxx为Helper的BundleID,ture/false设置开启还是关闭
     SMLoginItemSetEnabled(appHelperID, install);    // 设置开启还是关闭

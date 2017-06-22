@@ -3,61 +3,61 @@
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "正则表达式 2.png",
+      "filename" : "XCRegex_16pt_1x-2.png",
       "scale" : "1x"
     },
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "正则表达式.png",
+      "filename" : "XCRegex_16pt_1x.png",
       "scale" : "2x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "正则表达式-1.png",
+      "filename" : "XCRegex_16pt_1x-1.png",
       "scale" : "1x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "正则表达式-2.png",
+      "filename" : "XCRegex_16pt_2x.png",
       "scale" : "2x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "128.png",
+      "filename" : "XCRegex_32pt_2x.png",
       "scale" : "1x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "256.png",
+      "filename" : "XCRegex_128pt_1x.png",
       "scale" : "2x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "256-1.png",
+      "filename" : "XCRegex_128pt_1x-1.png",
       "scale" : "1x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "512.png",
+      "filename" : "XCRegex_128pt_2x.png",
       "scale" : "2x"
     },
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "512-1.png",
+      "filename" : "XCRegex_256pt_1x.png",
       "scale" : "1x"
     },
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "1024.png",
+      "filename" : "XCRegex_256pt_2x.png",
       "scale" : "2x"
     }
   ],
