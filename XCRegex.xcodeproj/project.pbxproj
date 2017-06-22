@@ -20,7 +20,30 @@
 		D8D1137D1EECF4B7008ED4A7 /* NSString+XCEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D1137C1EECF4B7008ED4A7 /* NSString+XCEmpty.m */; };
 		F299500C1EE156A900FA709C /* XCHelperController.m in Sources */ = {isa = PBXBuildFile; fileRef = F299500A1EE156A900FA709C /* XCHelperController.m */; };
 		F299500D1EE156A900FA709C /* XCHelperController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F299500B1EE156A900FA709C /* XCHelperController.xib */; };
+		F2B198911EFB6DA500937200 /* XCPreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B1988F1EFB6DA500937200 /* XCPreferenceController.m */; };
+		F2B198921EFB6DA500937200 /* XCPreferenceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B198901EFB6DA500937200 /* XCPreferenceController.xib */; };
+		F2B198961EFB8E0800937200 /* XCCommentKey.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B198951EFB8E0800937200 /* XCCommentKey.m */; };
+		F2B1989F1EFB98E200937200 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B1989E1EFB98E200937200 /* AppDelegate.m */; };
+		F2B198A21EFB98E200937200 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B198A11EFB98E200937200 /* main.m */; };
+		F2B198A51EFB98E200937200 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B198A41EFB98E200937200 /* ViewController.m */; };
+		F2B198A71EFB98E200937200 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2B198A61EFB98E200937200 /* Assets.xcassets */; };
+		F2B198AA1EFB98E200937200 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B198A81EFB98E200937200 /* Main.storyboard */; };
+		F2B198B11EFB9EEE00937200 /* XCRegexHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = F2B1989B1EFB98E200937200 /* XCRegexHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F2B198B41EFBA8E600937200 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B198B31EFBA8E600937200 /* ServiceManagement.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F2B198B01EFB9E9400937200 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				F2B198B11EFB9EEE00937200 /* XCRegexHelper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D83674A61C64BF7400F0DF51 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
@@ -47,6 +70,22 @@
 		F299500A1EE156A900FA709C /* XCHelperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCHelperController.m; sourceTree = "<group>"; };
 		F299500B1EE156A900FA709C /* XCHelperController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCHelperController.xib; sourceTree = "<group>"; };
 		F29D01731ECAFB1400F94054 /* XCRegex.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XCRegex.entitlements; sourceTree = "<group>"; };
+		F2B1988E1EFB6DA500937200 /* XCPreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCPreferenceController.h; sourceTree = "<group>"; };
+		F2B1988F1EFB6DA500937200 /* XCPreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCPreferenceController.m; sourceTree = "<group>"; };
+		F2B198901EFB6DA500937200 /* XCPreferenceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCPreferenceController.xib; sourceTree = "<group>"; };
+		F2B198941EFB8E0800937200 /* XCCommentKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCommentKey.h; sourceTree = "<group>"; };
+		F2B198951EFB8E0800937200 /* XCCommentKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCommentKey.m; sourceTree = "<group>"; };
+		F2B1989B1EFB98E200937200 /* XCRegexHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCRegexHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2B1989D1EFB98E200937200 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F2B1989E1EFB98E200937200 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F2B198A11EFB98E200937200 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F2B198A31EFB98E200937200 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F2B198A41EFB98E200937200 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F2B198A61EFB98E200937200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2B198A91EFB98E200937200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2B198AB1EFB98E200937200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2B198AF1EFB9E6600937200 /* XCRegexHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XCRegexHelper.entitlements; sourceTree = "<group>"; };
+		F2B198B31EFBA8E600937200 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +93,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2B198B41EFBA8E600937200 /* ServiceManagement.framework in Frameworks */,
 				D83674AA1C64BF8E00F0DF51 /* libicucore.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2B198981EFB98E200937200 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				D84D9F951C60C529009946E3 /* XCRegex */,
+				F2B1989C1EFB98E200937200 /* XCRegexHelper */,
 				D84D9F941C60C529009946E3 /* Products */,
+				F2B198B21EFBA8E600937200 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				D84D9F931C60C529009946E3 /* XCRegex.app */,
+				F2B1989B1EFB98E200937200 /* XCRegexHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,6 +130,8 @@
 		D84D9F951C60C529009946E3 /* XCRegex */ = {
 			isa = PBXGroup;
 			children = (
+				F2B198931EFB8DE600937200 /* XCDefaultConfig */,
+				F2B1988D1EFB6D5000937200 /* PreferenceController */,
 				D8D113771EECF1B0008ED4A7 /* Category */,
 				F29D01731ECAFB1400F94054 /* XCRegex.entitlements */,
 				D84D9F961C60C529009946E3 /* AppDelegate.h */,
@@ -123,6 +175,57 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		F2B1988D1EFB6D5000937200 /* PreferenceController */ = {
+			isa = PBXGroup;
+			children = (
+				F2B1988E1EFB6DA500937200 /* XCPreferenceController.h */,
+				F2B1988F1EFB6DA500937200 /* XCPreferenceController.m */,
+				F2B198901EFB6DA500937200 /* XCPreferenceController.xib */,
+			);
+			path = PreferenceController;
+			sourceTree = "<group>";
+		};
+		F2B198931EFB8DE600937200 /* XCDefaultConfig */ = {
+			isa = PBXGroup;
+			children = (
+				F2B198941EFB8E0800937200 /* XCCommentKey.h */,
+				F2B198951EFB8E0800937200 /* XCCommentKey.m */,
+			);
+			path = XCDefaultConfig;
+			sourceTree = "<group>";
+		};
+		F2B1989C1EFB98E200937200 /* XCRegexHelper */ = {
+			isa = PBXGroup;
+			children = (
+				F2B198AF1EFB9E6600937200 /* XCRegexHelper.entitlements */,
+				F2B1989D1EFB98E200937200 /* AppDelegate.h */,
+				F2B1989E1EFB98E200937200 /* AppDelegate.m */,
+				F2B198A31EFB98E200937200 /* ViewController.h */,
+				F2B198A41EFB98E200937200 /* ViewController.m */,
+				F2B198A61EFB98E200937200 /* Assets.xcassets */,
+				F2B198A81EFB98E200937200 /* Main.storyboard */,
+				F2B198AB1EFB98E200937200 /* Info.plist */,
+				F2B198A01EFB98E200937200 /* Supporting Files */,
+			);
+			path = XCRegexHelper;
+			sourceTree = "<group>";
+		};
+		F2B198A01EFB98E200937200 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F2B198A11EFB98E200937200 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2B198B21EFBA8E600937200 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2B198B31EFBA8E600937200 /* ServiceManagement.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -133,6 +236,7 @@
 				D84D9F8F1C60C529009946E3 /* Sources */,
 				D84D9F901C60C529009946E3 /* Frameworks */,
 				D84D9F911C60C529009946E3 /* Resources */,
+				F2B198B01EFB9E9400937200 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -141,6 +245,23 @@
 			name = XCRegex;
 			productName = XCRegex;
 			productReference = D84D9F931C60C529009946E3 /* XCRegex.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F2B1989A1EFB98E200937200 /* XCRegexHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2B198AC1EFB98E200937200 /* Build configuration list for PBXNativeTarget "XCRegexHelper" */;
+			buildPhases = (
+				F2B198971EFB98E200937200 /* Sources */,
+				F2B198981EFB98E200937200 /* Frameworks */,
+				F2B198991EFB98E200937200 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XCRegexHelper;
+			productName = XCRegexHelper;
+			productReference = F2B1989B1EFB98E200937200 /* XCRegexHelper.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -154,6 +275,16 @@
 				TargetAttributes = {
 					D84D9F921C60C529009946E3 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = Z6P4JKNFHR;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					F2B1989A1EFB98E200937200 = {
+						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = Z6P4JKNFHR;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -178,6 +309,7 @@
 			projectRoot = "";
 			targets = (
 				D84D9F921C60C529009946E3 /* XCRegex */,
+				F2B1989A1EFB98E200937200 /* XCRegexHelper */,
 			);
 		};
 /* End PBXProject section */
@@ -188,9 +320,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D84D9F9D1C60C529009946E3 /* Assets.xcassets in Resources */,
+				F2B198921EFB6DA500937200 /* XCPreferenceController.xib in Resources */,
 				F299500D1EE156A900FA709C /* XCHelperController.xib in Resources */,
 				D8825B7A1EEEE072004D7F57 /* XCAccessController.xib in Resources */,
 				D84D9FA01C60C529009946E3 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2B198991EFB98E200937200 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2B198A71EFB98E200937200 /* Assets.xcassets in Resources */,
+				F2B198AA1EFB98E200937200 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,10 +347,22 @@
 				D84D9F9B1C60C529009946E3 /* main.m in Sources */,
 				D8D1137D1EECF4B7008ED4A7 /* NSString+XCEmpty.m in Sources */,
 				D84D9FA91C60D129009946E3 /* XCRexWindow.m in Sources */,
+				F2B198961EFB8E0800937200 /* XCCommentKey.m in Sources */,
+				F2B198911EFB6DA500937200 /* XCPreferenceController.m in Sources */,
 				F299500C1EE156A900FA709C /* XCHelperController.m in Sources */,
 				D8D1137A1EECF1D1008ED4A7 /* NSTextView+XCRegex.m in Sources */,
 				D83674A81C64BF7400F0DF51 /* RegexKitLite.m in Sources */,
 				D84D9F981C60C529009946E3 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2B198971EFB98E200937200 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2B198A51EFB98E200937200 /* ViewController.m in Sources */,
+				F2B198A21EFB98E200937200 /* main.m in Sources */,
+				F2B1989F1EFB98E200937200 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +375,14 @@
 				D84D9F9F1C60C529009946E3 /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		F2B198A81EFB98E200937200 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2B198A91EFB98E200937200 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -343,6 +505,52 @@
 			};
 			name = Release;
 		};
+		F2B198AD1EFB98E200937200 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_ENTITLEMENTS = XCRegexHelper/XCRegexHelper.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Z6P4JKNFHR;
+				INFOPLIST_FILE = XCRegexHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joinf.www.XCRegexHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F2B198AE1EFB98E200937200 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_ENTITLEMENTS = XCRegexHelper/XCRegexHelper.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Z6P4JKNFHR;
+				INFOPLIST_FILE = XCRegexHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joinf.www.XCRegexHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -360,6 +568,15 @@
 			buildConfigurations = (
 				D84D9FA51C60C529009946E3 /* Debug */,
 				D84D9FA61C60C529009946E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2B198AC1EFB98E200937200 /* Build configuration list for PBXNativeTarget "XCRegexHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2B198AD1EFB98E200937200 /* Debug */,
+				F2B198AE1EFB98E200937200 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

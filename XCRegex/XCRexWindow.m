@@ -9,7 +9,7 @@
 #import "XCRexWindow.h"
 #import "NSTextView+XCRegex.h"
 #import "XCAccessController.h"
-
+#import "XCCommentKey.h"
 
 
 
@@ -113,6 +113,12 @@
         _accessController = [[XCAccessController alloc]initWithNibName:@"XCAccessController" bundle:nil];
     }
     return  _accessController;
+}
+
+- (void)close{
+    [super close];
+    BOOL isQuitApp = [XCDefault boolForKey:XCQuitAppKey];
+    if (isQuitApp) {[NSApp terminate:nil];}
 }
 
 @end
