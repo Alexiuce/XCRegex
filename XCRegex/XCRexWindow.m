@@ -9,7 +9,7 @@
 #import "XCRexWindow.h"
 #import "NSTextView+XCRegex.h"
 #import "XCAccessController.h"
-
+#import "XCCommentKey.h"
 
 
 
@@ -20,6 +20,7 @@
 @property (unsafe_unretained) IBOutlet NSTextView *patternTextView;
 @property (unsafe_unretained) IBOutlet NSTextView *sourceTextView;
 @property (nonatomic ,strong) NSStatusItem *statusItem;
+@property (weak, nonatomic) NSButton *accessButton;
 
 @property (nonatomic, strong)XCAccessController *accessController;
 
@@ -48,13 +49,14 @@
     // 设置window titleBar 透明
     self.titlebarAppearsTransparent = YES;
     // 设置内容填充整个window
-    self.styleMask = self.styleMask | NSFullSizeContentViewWindowMask;
+    self.styleMask = self.styleMask | NSWindowStyleMaskFullSizeContentView;
     // 隐藏全屏按钮
     [self standardWindowButton:NSWindowZoomButton].hidden = YES;
     [self textDidChange:[NSNotification notificationWithName:@"begin" object:nil]];
     
     
-    NSButton *btn = [NSButton buttonWithImage:[NSImage imageNamed:@"left"] target:self action:@selector(clickButton:)];
+    NSButton *btn = [NSButton buttonWithImage:[NSImage imageNamed:@"left"] target:self action:@selector(clickButton)];
+    
     btn.bezelStyle = NSBezelStyleRegularSquare;
     btn.bordered = NO;
     NSView *themeView = [[self contentView] superview];
@@ -63,6 +65,7 @@
     NSArray *subViews = [themeView subviews];
     NSView *containerView = [subViews objectAtIndex:1];
     [containerView addSubview:btn positioned:NSWindowAbove relativeTo:nil];
+    _accessButton = btn;
     
     NSRect oldRect = self.frame;
     CGFloat tx = (oldRect.size.width - 80) * 0.5;
@@ -95,10 +98,10 @@
     [_sourceTextView xc_regextHightLightWithPattern:_patternTextView.string];
 }
 
-- (void)clickButton:(NSButton *)btn{
-    CGFloat deltaWidth = btn.state ? 300 : -300;
-    NSString *imgName = btn.state == 1? @"right" :@"left";
-    btn.image = [NSImage imageNamed:imgName];
+- (void)clickButton{
+    CGFloat deltaWidth = _accessButton.state ? 300 : -300;
+    NSString *imgName = _accessButton.state == 1? @"right" :@"left";
+    _accessButton.image = [NSImage imageNamed:imgName];
     NSRect oldRect = self.frame;
     NSRect newRect = NSMakeRect(oldRect.origin.x, oldRect.origin.y, oldRect.size.width + deltaWidth, oldRect.size.height);
     [self setFrame:newRect display:YES animate:YES];
@@ -110,6 +113,12 @@
         _accessController = [[XCAccessController alloc]initWithNibName:@"XCAccessController" bundle:nil];
     }
     return  _accessController;
+}
+
+- (void)close{
+    [super close];
+    BOOL isQuitApp = [XCDefault boolForKey:XCQuitAppKey];
+    if (isQuitApp) {[NSApp terminate:nil];}
 }
 
 @end

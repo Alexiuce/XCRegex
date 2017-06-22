@@ -8,9 +8,13 @@
 
 #import "AppDelegate.h"
 #import "XCHelperController.h"
+#import "XCPreferenceController.h"
+
 
 @interface AppDelegate ()
 @property (nonatomic, strong) XCHelperController *helperController;
+@property (nonatomic, strong) XCPreferenceController *preference;
+
 
 @property (weak) IBOutlet NSWindow *window;
 @end
@@ -38,5 +42,16 @@
     }
     [_helperController showWindow:nil];
 }
+- (IBAction)clickPreference:(NSMenuItem *)sender {
+
+    if (_preference == nil) {
+        _preference = [[XCPreferenceController alloc]initWithWindowNibName:@"XCPreferenceController"];
+    }
+    [_preference showWindow:self];
+    
+    
+}
+
+
 
 @end
