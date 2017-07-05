@@ -15,7 +15,9 @@
 
 @interface XCRexWindow ()<NSTextViewDelegate>
 
+@property (weak) IBOutlet NSTextField *matchPlaceholder;
 
+@property (weak) IBOutlet NSTextField *regexPlaceholder;
 
 @property (unsafe_unretained) IBOutlet NSTextView *patternTextView;
 @property (unsafe_unretained) IBOutlet NSTextView *sourceTextView;
@@ -96,6 +98,8 @@
 - (void)textDidChange:(NSNotification *)notification{
     [_patternTextView xc_hightLightForRegex];
     [_sourceTextView xc_regextHightLightWithPattern:_patternTextView.string];
+    _regexPlaceholder.hidden = _patternTextView.string.length > 0;
+    _matchPlaceholder.hidden = _sourceTextView.string.length > 0;
 }
 
 - (void)clickButton{

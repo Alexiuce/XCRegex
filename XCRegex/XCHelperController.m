@@ -19,7 +19,11 @@
     [super windowDidLoad];
     NSString *version = [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"];
     self.versionLabel.stringValue = [NSString stringWithFormat:@"version: %@",version];
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    self.window.titlebarAppearsTransparent = YES;
+    self.window.styleMask = self.window.styleMask | NSWindowStyleMaskFullSizeContentView;
+    [self.window standardWindowButton:NSWindowMiniaturizeButton].hidden = YES;
+    [self.window standardWindowButton:NSWindowZoomButton].hidden = YES;
+   
 }
 
 @end
