@@ -60,12 +60,12 @@
     
     
     NSButton *btn = [NSButton buttonWithImage:[NSImage imageNamed:@"left"] target:self action:@selector(clickButton)];
-    
+
     btn.bezelStyle = NSBezelStyleRegularSquare;
     btn.bordered = NO;
     NSView *themeView = [[self contentView] superview];
     NSRect rect = themeView.bounds;
-    btn.frame = NSMakeRect(rect.size.width - 30, -4, 25, 25);
+    btn.frame = NSMakeRect(rect.size.width - 30, rect.size.height - 4 - 25, 25, 25);
     NSArray *subViews = [themeView subviews];
     NSView *containerView = [subViews objectAtIndex:1];
     [containerView addSubview:btn positioned:NSWindowAbove relativeTo:nil];
