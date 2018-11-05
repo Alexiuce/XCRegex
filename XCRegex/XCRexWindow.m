@@ -37,11 +37,13 @@
     _patternTextView.delegate = self;
     _patternTextView.textColor = [NSColor whiteColor];
     _patternTextView.automaticQuoteSubstitutionEnabled = NO;
+    [_patternTextView setInsertionPointColor:NSColor.yellowColor];
     
     _sourceTextView.font = [NSFont systemFontOfSize:15];
     _sourceTextView.delegate = self;
     _sourceTextView.textColor = [NSColor whiteColor];
     _sourceTextView.automaticQuoteSubstitutionEnabled = NO;
+    [_sourceTextView setInsertionPointColor:NSColor.whiteColor];
     // 设置状态栏icon
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     self.statusItem.image = [NSImage imageNamed:@"statusItem"];
