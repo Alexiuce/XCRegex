@@ -275,7 +275,7 @@
 				TargetAttributes = {
 					D84D9F921C60C529009946E3 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = Z6P4JKNFHR;
+						DevelopmentTeam = AAV8FD48R9;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -285,7 +285,7 @@
 					};
 					F2B1989A1EFB98E200937200 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = Z6P4JKNFHR;
+						DevelopmentTeam = AAV8FD48R9;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -474,7 +474,7 @@
 				CODE_SIGN_ENTITLEMENTS = XCRegex/XCRegex.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = Z6P4JKNFHR;
+				DEVELOPMENT_TEAM = AAV8FD48R9;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XCRegex/PrefixHeader.pch";
 				INFOPLIST_FILE = XCRegex/Info.plist;
@@ -493,7 +493,7 @@
 				CODE_SIGN_ENTITLEMENTS = XCRegex/XCRegex.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = Z6P4JKNFHR;
+				DEVELOPMENT_TEAM = AAV8FD48R9;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XCRegex/PrefixHeader.pch";
 				INFOPLIST_FILE = XCRegex/Info.plist;
@@ -517,7 +517,7 @@
 				CODE_SIGN_ENTITLEMENTS = XCRegexHelper/XCRegexHelper.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = Z6P4JKNFHR;
+				DEVELOPMENT_TEAM = AAV8FD48R9;
 				INFOPLIST_FILE = XCRegexHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -540,7 +540,7 @@
 				CODE_SIGN_ENTITLEMENTS = XCRegexHelper/XCRegexHelper.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = Z6P4JKNFHR;
+				DEVELOPMENT_TEAM = AAV8FD48R9;
 				INFOPLIST_FILE = XCRegexHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
