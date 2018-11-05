@@ -31,9 +31,7 @@
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag{
-    if (flag == NO) {
-        [self.window makeKeyAndOrderFront:nil];
-    }
+    if (flag == NO) {[self.window makeKeyAndOrderFront:nil];}
     return YES;
 }
 - (IBAction)clickHelp:(id)sender {
