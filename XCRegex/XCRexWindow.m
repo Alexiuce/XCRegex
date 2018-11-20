@@ -94,16 +94,11 @@
 
 
 #pragma mark - 事件监听
+/** 点击状态栏事件 */
 - (void)clickStatusItem{
     self.visible ? nil :[self makeKeyAndOrderFront:nil];
 }
-- (void)textDidChange:(NSNotification *)notification{
-    [_patternTextView xc_hightLightForRegex];
-    [_sourceTextView xc_regextHightLightWithPattern:_patternTextView.string];
-    _regexPlaceholder.hidden = _patternTextView.string.length > 0;
-    _matchPlaceholder.hidden = _sourceTextView.string.length > 0;
-}
-
+/** 点击显示辅助提示按钮事件 */
 - (void)clickButton{
     CGFloat deltaWidth = _accessButton.state ? 300 : -300;
     NSString *imgName = _accessButton.state == 1? @"right" :@"left";
@@ -112,6 +107,20 @@
     NSRect newRect = NSMakeRect(oldRect.origin.x, oldRect.origin.y, oldRect.size.width + deltaWidth, oldRect.size.height);
     [self setFrame:newRect display:YES animate:YES];
 }
+/** 点击关闭按钮事件 */
+- (void)close{
+    [super close];
+    BOOL isQuitApp = [XCDefault boolForKey:XCQuitAppKey];
+    if (isQuitApp) {[NSApp terminate:nil];}
+}
+#pragma mark - NSTextViewDelegate
+- (void)textDidChange:(NSNotification *)notification{
+    [_patternTextView xc_hightLightForRegex];
+    [_sourceTextView xc_regextHightLightWithPattern:_patternTextView.string];
+    _regexPlaceholder.hidden = _patternTextView.string.length > 0;
+    _matchPlaceholder.hidden = _sourceTextView.string.length > 0;
+}
+
 
 
 - (XCAccessController *)accessController{
@@ -121,10 +130,5 @@
     return  _accessController;
 }
 
-- (void)close{
-    [super close];
-    BOOL isQuitApp = [XCDefault boolForKey:XCQuitAppKey];
-    if (isQuitApp) {[NSApp terminate:nil];}
-}
 
 @end
