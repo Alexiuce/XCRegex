@@ -26,9 +26,7 @@
     [self.window standardWindowButton:NSWindowMiniaturizeButton].hidden = YES;
     [self.window standardWindowButton:NSWindowZoomButton].hidden = YES;
     
-    NSLog(@"start %@",[XCDefault boolForKey:XCStartAppKey]? @"yes":@"no");
     self.starButton.state =  [XCDefault boolForKey:XCStartAppKey]? NSOnState : NSOffState;
-     NSLog(@"queit %@",[XCDefault boolForKey:XCQuitAppKey]? @"yes":@"no");
     self.quitButton.state = [XCDefault boolForKey:XCQuitAppKey]? NSOnState : NSOffState;
 }
 
