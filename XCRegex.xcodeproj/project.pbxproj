@@ -130,10 +130,11 @@
 		D84D9F951C60C529009946E3 /* XCRegex */ = {
 			isa = PBXGroup;
 			children = (
+				F29D01731ECAFB1400F94054 /* XCRegex.entitlements */,
+				D8BBA57521A3A4BD00D43CA5 /* ThirdLib */,
 				F2B198931EFB8DE600937200 /* XCDefaultConfig */,
 				F2B1988D1EFB6D5000937200 /* PreferenceController */,
 				D8D113771EECF1B0008ED4A7 /* Category */,
-				F29D01731ECAFB1400F94054 /* XCRegex.entitlements */,
 				D84D9F961C60C529009946E3 /* AppDelegate.h */,
 				D84D9F971C60C529009946E3 /* AppDelegate.m */,
 				D84D9FA71C60D129009946E3 /* XCRexWindow.h */,
@@ -141,8 +142,6 @@
 				D8825B761EEEE072004D7F57 /* XCAccessController.h */,
 				D8825B771EEEE072004D7F57 /* XCAccessController.m */,
 				D8825B781EEEE072004D7F57 /* XCAccessController.xib */,
-				D83674A61C64BF7400F0DF51 /* RegexKitLite.h */,
-				D83674A71C64BF7400F0DF51 /* RegexKitLite.m */,
 				F29950091EE156A900FA709C /* XCHelperController.h */,
 				F299500A1EE156A900FA709C /* XCHelperController.m */,
 				F299500B1EE156A900FA709C /* XCHelperController.xib */,
@@ -162,6 +161,15 @@
 				D8D1137E1EED0754008ED4A7 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D8BBA57521A3A4BD00D43CA5 /* ThirdLib */ = {
+			isa = PBXGroup;
+			children = (
+				D83674A61C64BF7400F0DF51 /* RegexKitLite.h */,
+				D83674A71C64BF7400F0DF51 /* RegexKitLite.m */,
+			);
+			path = ThirdLib;
 			sourceTree = "<group>";
 		};
 		D8D113771EECF1B0008ED4A7 /* Category */ = {
