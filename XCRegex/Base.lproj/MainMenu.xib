@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -705,21 +706,23 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                     </scroller>
                                 </scrollView>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nfp-ls-YGr">
-                                    <rect key="frame" x="16" y="150" width="143" height="17"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nfp-ls-YGr">
+                                    <rect key="frame" x="16" y="150" width="118" height="17"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="input your regex ..." id="Fb6-e7-tVO">
                                         <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="Udw-mV-hXX" firstAttribute="top" secondItem="FrT-Bd-Y04" secondAttribute="top" constant="35" id="3hq-Up-v6D"/>
+                                <constraint firstItem="nfp-ls-YGr" firstAttribute="leading" secondItem="FrT-Bd-Y04" secondAttribute="leading" constant="18" id="BFg-TN-C55"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nfp-ls-YGr" secondAttribute="trailing" constant="20" symbolic="YES" id="J23-DJ-vPm"/>
                                 <constraint firstAttribute="bottom" secondItem="Udw-mV-hXX" secondAttribute="bottom" constant="9" id="Q7K-iP-laH"/>
                                 <constraint firstAttribute="trailing" secondItem="Udw-mV-hXX" secondAttribute="trailing" constant="10" id="mHT-qj-d2g"/>
                                 <constraint firstItem="Udw-mV-hXX" firstAttribute="leading" secondItem="FrT-Bd-Y04" secondAttribute="leading" constant="10" id="wxJ-oU-t8U"/>
+                                <constraint firstItem="nfp-ls-YGr" firstAttribute="top" secondItem="FrT-Bd-Y04" secondAttribute="top" constant="34" id="znS-Vu-clu"/>
                             </constraints>
                         </view>
                         <constraints>
@@ -761,21 +764,23 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                     </scroller>
                                 </scrollView>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NZS-tI-290">
-                                    <rect key="frame" x="14" y="336" width="246" height="17"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NZS-tI-290">
+                                    <rect key="frame" x="14" y="336" width="221" height="17"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="input the text need to be matched..." id="xAd-sx-bkN">
                                         <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" name="TextColor"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                             </subviews>
                             <constraints>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NZS-tI-290" secondAttribute="trailing" constant="20" symbolic="YES" id="B8M-HZ-X3E"/>
                                 <constraint firstAttribute="bottom" secondItem="lKN-AL-X5Z" secondAttribute="bottom" constant="16" id="OsF-JF-MT3"/>
+                                <constraint firstItem="NZS-tI-290" firstAttribute="top" secondItem="Une-Qu-5D8" secondAttribute="top" constant="13" id="Uv6-hU-7E7"/>
                                 <constraint firstAttribute="trailing" secondItem="lKN-AL-X5Z" secondAttribute="trailing" constant="9" id="bK6-Mm-y62"/>
                                 <constraint firstItem="lKN-AL-X5Z" firstAttribute="top" secondItem="Une-Qu-5D8" secondAttribute="top" constant="14" id="ff8-Ac-mwG"/>
                                 <constraint firstItem="lKN-AL-X5Z" firstAttribute="leading" secondItem="Une-Qu-5D8" secondAttribute="leading" constant="9" id="nH6-f8-mWP"/>
+                                <constraint firstItem="NZS-tI-290" firstAttribute="leading" secondItem="Une-Qu-5D8" secondAttribute="leading" constant="16" id="py1-Hd-qhd"/>
                             </constraints>
                         </view>
                         <constraints>
@@ -801,4 +806,9 @@
             <point key="canvasLocation" x="177.5" y="561.5"/>
         </window>
     </objects>
+    <resources>
+        <namedColor name="TextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
